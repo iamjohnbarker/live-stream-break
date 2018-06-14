@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Live Stream Break</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style>body{padding:30px;}</style>
+  </head>
+  <body>
+    <h2>Live Stream Break</h2>
+
+  <form>
+    <div class="form-group">
+      <label for="speakerName">Event Name</label>
+      <input id="eventName" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="speakerName">Event Logo URL</label>
+      <input id="eventLogo" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="spreadsheetID">Spreadsheet ID</label>
+      <div class="input-group mb-3">
+        <input id="spreadsheetID" class="form-control" type="text" name="" placeholder="e.g. abc123-321bca (grab from the URL)">
+        <div class="input-group-append">
+          <button id="spreadsheetIDSave" class="btn btn-outline-secondary" type="button">Save</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="speakerName">Talk Picker</label>
+      <select id="talkPicker" class="form-control">
+        <option>First, enter the ID above</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="speakerName">Talk Title</label>
+      <input id="speakerName" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="speakerTitle">Speaker Name</label>
+      <input id="speakerTitle" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="trackTime">Time</label>
+      <input id="trackTime" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="trackZone">Time Zone</label>
+      <input id="trackZone" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="speakerImage">Image URL</label>
+      <input id="speakerImage" class="form-control" type="text" name="" placeholder="">
+    </div>
+
+
+
+    <button id="sendToMain" class="btn btn-primary" type="button" name="button">Update</button>
+  </form>
+    </div>
+
+
+
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

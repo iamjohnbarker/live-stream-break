@@ -1,0 +1,31 @@
+{
+  "name": "live-stream-break",
+  "productName": "Live Stream Break",
+  "version": "0.0.8",
+  "description": "A nice way to display information to your live stream viewers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds"
+  },
+  "repository": "https://github.com/iamjohnbarker/live-stream-break",
+  "keywords": [
+    "Live Stream",
+    "break",
+    "intermission",
+    "elctron",
+    "video"
+  ],
+  "author": "John Barker",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.7",
+    "electron-packager": "^12.1.0"
+  },
+  "dependencies": {
+    "google-spreadsheet-to-json": "^1.0.0",
+    "jquery": "^3.3.1",
+    "looks-same": "^3.3.0",
+    "timr": "^2.0.0"
+  }
+}

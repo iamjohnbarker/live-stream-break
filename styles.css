@@ -1,0 +1,111 @@
+body{
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto";
+}
+.header{
+  text-align: center;
+}
+.header img{
+  margin-top: 100px;
+}
+h1{
+  margin-top:50px;
+  margin-bottom:100px;
+  font-size: 75px;
+}
+h2{
+  margin-bottom:25px;
+  font-size: 30px;
+}
+#title{
+  color:#FFF;
+  font-size: 100px;
+}
+.comingUp {
+  text-align: left;
+    color: #fff;
+    line-height: 55px;
+    font-size: 25px;
+    width: 500px;
+    background-color: ;
+    padding: 15px;
+}
+.item{
+    height: 150px;
+    padding: 20px;
+    background-color: #1b1b1b;
+    margin: 10px;
+}
+#countdown {
+text-align: left;
+float:right;
+    color: #fff;
+    font-size: 25px;
+    width: 100px;
+    padding: 11px;
+    background-color: red;
+}
+.tableHead {
+ background-color: red;
+ margin-left:10px;
+ margin-right: 10px;
+}
+
+
+.floatleft {
+  float: left;
+  clear: left;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.item {
+  height: 150px;
+  padding: 20px;
+}
+
+.text {
+  padding: 20px;
+}
+
+.talkTitle {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.talkSpeaker {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.talkTime {
+  font-size: 20px;
+}
+
+.headings {
+  text-align: center;
+  margin-bottom: 100px;
+  color: #fff;
+  line-height: 100px
+}
+
+.breakHeading {
+  font-size: 80px;
+}
+
+.breakSubHeading {
+  font-size: 45px;
+}
+
+.schedule {
+  color: #fff;
+  width: 80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+.speakerImage{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

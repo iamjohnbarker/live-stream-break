@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='./styles.css'>
+    <meta charset='UTF-8'>
+    <title>Display</title>
+  </head>
+  <body>
+    <div class='header'>
+      <img id='eventLogo' src='' width='300px' alt=''>
+      <h1>Welcome to the</br><span id='eventName' class='eventName'>EVENT NAME</span></br>live stream</h1>
+    </div>
+    <div id='title' class=''>
+    </div>
+
+
+    <div class='schedule'>
+      <div class='tableHead'>
+        <span class='comingUp'>Coming up </span>
+        <div id='countdown'></div>
+
+      </div>
+      <div class='item'>
+        <div class='customimage floatleft'><img id='speakerImage' class='speakerImage' src=''>
+        </div>
+        <p>
+          <div class='text'><span id='talkTitle' class='talkTitle'>TITLE</span>
+          </br>
+          by <span id='talkSpeaker' class='talkSpeaker'>NAME</span> at <span id='talkTime' class='talkTime'>TIME</span> (<span id='talkZone' class='talkZone'>TIME</span>)
+          </br>
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='logo'></div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./display.js')
+
+    </script>
+  </body>
+</html>
