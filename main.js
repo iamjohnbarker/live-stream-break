@@ -14,6 +14,7 @@ const {ipcMain} = require('electron')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 let mainWindowTwo
+let mainWindowThree
 
 function createWindow () {
   // Create the browser window.
@@ -61,11 +62,35 @@ function createWindowTwo () {
   })
 }
 
+function createWindowThree () {
+  // Create the browser window.
+  mainWindowThree = new BrowserWindow({width: 1280, height: 720, transparent: true, frame: false})
+
+  // and load the index.html of the app.
+  mainWindowThree.loadURL(url.format({
+    pathname: path.join(__dirname, 'displayScreenshot.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  // Open the DevTools.
+  // mainWindow.webContents.openDevTools()
+
+  // Emitted when the window is closed.
+  mainWindowThree.on('closed', function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    mainWindowTwo = null
+  })
+}
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
 app.on('ready', createWindowTwo)
+app.on('ready', createWindowThree)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {

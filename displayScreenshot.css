@@ -1,0 +1,35 @@
+.screenshot img {
+  margin-top: 60px;
+  margin-left: 30px;
+  width: 80%;
+}
+.speakerImage {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+.speakerImage img {
+  width: 140px;
+}
+body{
+  background-image: url('https://static1.squarespace.com/static/56f018b62eeb8148f994c74d/t/5a3940f224a6945d30e6f0d5/1513703526192/P1011410.JPG?format=2500w');
+}
+.text {
+    text-align: right;
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+    font-family: futura;
+}
+.talkTitle {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+}
+.speakerName {
+    background-color: white;
+    padding: 5px;
+    font-size: 20px;
+}
