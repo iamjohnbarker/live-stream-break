@@ -1,7 +1,7 @@
 # Live Stream Break
 An app for displaying information to your live stream viewers.
 
-![live-stream-break](https://github.com/iamjohnbarker/live-stream-break/assets/live-stream-break.jpg "Live Stream Break")
+![live-stream-break](https://github.com/iamjohnbarker/live-stream-break/raw/master/assets/live-stream-break.jpg "Live Stream Break")
 
 ## How it works
 ### Connections
@@ -20,7 +20,7 @@ You can either make changes on your Google Sheet, or adjust any details on the f
 Set up your scedule using a Google Sheet so that you don't have to do lots of copy/pasting during the live event.
 
 ### Timers
-![notifcation-example](https://github.com/iamjohnbarker/live-stream-break/assets/notification-example.jpg "Notification example")
+![notifcation-example](https://github.com/iamjohnbarker/live-stream-break/raw/master/assets/notification-example.jpg "Notification example")
 What 'Talk Time' will begin a countdown timer right on your Live Stream Break display window, this will allow viewers to be kept up to date.
 
 There are also desktop notifcations built right in so that you know when there are 5 mins, 3 mins & 1 minute left on the timer.
