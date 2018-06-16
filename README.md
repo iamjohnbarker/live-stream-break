@@ -12,7 +12,7 @@ All you have to do it lauch the application, attached your computer to a live vi
 ### Google Sheets
 Grab the ID from whatever Google Sheet you want to pull info from (you can use [this sheet](https://docs.google.com/spreadsheets/d/1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU/edit?usp=sharing) as a template). 
 
-Remember, the ID is just this part of the example URL above: `1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU`.
+Remember, the ID is just this part of the example URL above: docs.google.com/spreadsheets/d/`1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU`/edit#gid=0.
 
 If you'd rather not use Google Sheets, just enter the information right into Live Stream Break!
 
