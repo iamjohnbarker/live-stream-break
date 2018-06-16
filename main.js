@@ -1,5 +1,5 @@
 const electron = require('electron')
-const {app, Menu} = require('electron')
+const { app, Menu } = require('electron')
 // Module to control application life.
 //const app = electron.app
 // Module to create native browser window.
@@ -8,16 +8,16 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
-const {ipcMain} = require('electron')
+const { ipcMain } = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 let mainWindowTwo
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 460, height: 940})
+  mainWindow = new BrowserWindow({ width: 460, height: 940 })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -38,9 +38,9 @@ function createWindow () {
   })
 }
 
-function createWindowTwo () {
+function createWindowTwo() {
   // Create the browser window.
-  mainWindowTwo = new BrowserWindow({width: 900, height: 500})
+  mainWindowTwo = new BrowserWindow({ width: 900, height: 500 })
 
   // and load the index.html of the app.
   mainWindowTwo.loadURL(url.format({
@@ -193,7 +193,7 @@ let template = [{
           buttons: ['Ok'],
           message: 'This demo is for the Menu section, showing how to create a clickable menu item in the application menu.'
         }
-        dialog.showMessageBox(focusedWindow, options, function () {})
+        dialog.showMessageBox(focusedWindow, options, function () { })
       }
     }
   }]
@@ -230,7 +230,7 @@ let template = [{
   }]
 }]
 
-function addUpdateMenuItems (items, position) {
+function addUpdateMenuItems(items, position) {
   if (process.mas) return
 
   const version = app.getVersion()
@@ -261,7 +261,7 @@ function addUpdateMenuItems (items, position) {
   items.splice.apply(items, [position, 0].concat(updateItems))
 }
 
-function findReopenMenuItem () {
+function findReopenMenuItem() {
   const menu = Menu.getApplicationMenu()
   if (!menu) return
 
@@ -319,9 +319,9 @@ if (process.platform === 'darwin') {
   template[3].submenu.push({
     type: 'separator'
   }, {
-    label: 'Bring All to Front',
-    role: 'front'
-  })
+      label: 'Bring All to Front',
+      role: 'front'
+    })
 
   addUpdateMenuItems(template[0].submenu, 1)
 }

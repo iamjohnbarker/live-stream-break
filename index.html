@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Live Stream Break</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <style>body{padding:30px;}</style>
-  </head>
-  <body>
-    <h2>Live Stream Break</h2>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Live Stream Break</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Live Stream Break</h2>
 
   <form>
-    <div class="form-group">
-      <label for="speakerName">Event Name</label>
-      <input id="eventName" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="speakerName">Event Logo URL</label>
-      <input id="eventLogo" class="form-control" type="text" name="" placeholder="">
-    </div>
     <div class="form-group">
       <label for="spreadsheetID">Spreadsheet ID</label>
       <div class="input-group mb-3">
@@ -27,12 +26,19 @@
         </div>
       </div>
     </div>
-    </div>
     <div class="form-group">
       <label for="speakerName">Talk Picker</label>
       <select id="talkPicker" class="form-control">
         <option>First, enter the ID above</option>
       </select>
+    </div>
+    <div class="form-group">
+      <label for="speakerName">Event Name</label>
+      <input id="eventName" class="form-control" type="text" name="" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="speakerName">Event Logo URL</label>
+      <input id="eventLogo" class="form-control" type="text" name="" placeholder="">
     </div>
     <div class="form-group">
       <label for="speakerName">Talk Title</label>
@@ -59,14 +65,15 @@
 
     <button id="sendToMain" class="btn btn-primary" type="button" name="button">Update</button>
   </form>
-    </div>
+  </div>
 
 
 
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
 </html>

@@ -1,7 +1,7 @@
 {
   "name": "live-stream-break",
   "productName": "Live Stream Break",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A nice way to display information to your live stream viewers.",
   "main": "main.js",
   "scripts": {
@@ -10,10 +10,10 @@
   },
   "repository": "https://github.com/iamjohnbarker/live-stream-break",
   "keywords": [
-    "Live Stream",
+    "live stream",
     "break",
     "intermission",
-    "elctron",
+    "electron",
     "video"
   ],
   "author": "John Barker",
