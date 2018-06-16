@@ -11,7 +11,9 @@ All you have to do it lauch the application, attached your computer to a live vi
 
 ### Google Sheets
 Grab the ID from whatever Google Sheet you want to pull info from (you can use [this sheet](https://docs.google.com/spreadsheets/d/1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU/edit?usp=sharing) as a template). 
-The ID is just the part in red: https://docs.google.com/spreadsheets/d/<span style="font-color:red">1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU</span>/edit#gid=0
+
+The ID is just the part in red: docs.google.com/spreadsheets/d/<span style="font-color:red">1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU</span>/edit#gid=0.
+
 If you'd rather not use Google Sheets, just enter the information right into Live Stream Break!
 
 ## Features
@@ -23,8 +25,10 @@ You can either make changes on your Google Sheet, or adjust any details on the f
 Set up your schedule using a Google Sheet so that you don't have to do lots of copy/pasting during the live event.
 
 ### Timers
-'Talk Time' will begin a countdown timer right on your Live Stream Break display window, this will allow viewers to be kept up to date on when the event beings/continues.
 <img src="https://github.com/iamjohnbarker/live-stream-break/raw/master/assets/notification-example.jpg" width="40%">
+
+'Talk Time' will begin a countdown timer right on your Live Stream Break display window, this will allow viewers to be kept up to date on when the event beings/continues.
+
 There are also desktop notifcations built right in so that you know when there are 5 mins, 3 mins & 1 minute left on the timer.
 
 ### On-brand
