@@ -43,6 +43,10 @@ document.getElementById('spreadsheetIDRefresh').addEventListener('click', functi
     .catch(function (err) {
       console.log(err.message);
       console.log(err.stack);
+      optionError = document.createElement('option');
+      optionError.text = "That didn't work... Try checking your ID";
+      dropdown.remove(dropdown[0]);
+      dropdown.add(optionError, 0);
     });
 
   document.getElementById('talkPicker').addEventListener('change', function (e) {
