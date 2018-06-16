@@ -114,7 +114,7 @@ function myFunction(countDownDate) {
 
       if (distance < 0) {
             clearInterval(myVar);
-            document.getElementById("countdown").innerHTML = " ";
+            document.getElementById("countdown").innerHTML = "Starting soon...";
         }
 
     }, 1000);

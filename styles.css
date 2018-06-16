@@ -24,27 +24,27 @@ h2{
 }
 .comingUp {
   text-align: left;
-    color: #fff;
-    line-height: 55px;
-    font-size: 25px;
-    width: 500px;
-    background-color: ;
-    padding: 15px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 25px;
+  width: 500px;
+  background-color: ;
+  padding: 15px;
 }
 .item{
-    height: 150px;
-    padding: 20px;
-    background-color: #1b1b1b;
-    margin: 10px;
+  height: 150px;
+  padding: 20px;
+  background-color: #1b1b1b;
+  margin: 10px;
 }
 #countdown {
-text-align: left;
-float:right;
-    color: #fff;
-    font-size: 25px;
-    width: 100px;
-    padding: 11px;
-    background-color: red;
+  text-align: right;
+  float: right;
+  color: #fff;
+  font-size: 25px;
+  width: 510px;
+  padding: 11px;
+  background-color: red;
 }
 .tableHead {
  background-color: red;

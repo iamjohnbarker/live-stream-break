@@ -4,35 +4,38 @@ const {ipcMain} = require('electron');
 var gsjson = require('google-spreadsheet-to-json');
 
 var dropdown = document.getElementById('talkPicker');
-var spreadsheetID = document.getElementById('spreadsheetID').addEventListener('change', function (e) {
-
+document.getElementById('spreadsheetIDRefresh').addEventListener('click', function fetchSpreadsheet(e) {
+console.log(e);
+var spreadsheetID = document.getElementById('spreadsheetID').value;
+console.log(spreadsheetID);
 optionDefault = document.createElement('option');
+document.getElementById('talkPicker').options.length = 0;
 optionDefault.text = "Grabbing data, hold tight...";
 dropdown.remove(dropdown[0]);
 dropdown.add(optionDefault, 0);
 
 gsjson({
-    spreadsheetId: e.srcElement.value,
+    spreadsheetId: spreadsheetID,
     // other options...
 })
 .then(function(result) {
   console.log(e.srcElement.value);
-    console.log(result.length);
-    console.log(result);
-    optionDefault = document.createElement('option');
-    optionDefault.text = "Choose a talk...";
-     dropdown.remove(dropdown[0]);
-     dropdown.add(optionDefault, 0);
-    for (var i = 0; i < result.length; i++) {
-      option = document.createElement('option');
-      option.text = result[i].speakerName+' - '+result[i].talkTitle;
-      option.value = i;
-      option.talkTitle = result[i].talkTitle;
-      option.speakerName = result[i].speakerName;
-      option.talkTime = result[i].talkTime;
-      option.talkDate = result[i].talkDate;
-      dropdown.add(option);
-    }
+  console.log(result.length);
+  console.log(result);
+  optionDefault = document.createElement('option');
+  optionDefault.text = "Choose a talk...";
+  dropdown.remove(dropdown[0]);
+  dropdown.add(optionDefault, 0);
+  for (var i = 0; i < result.length; i++) {
+    option = document.createElement('option');
+    option.text = result[i].speakerName+' - '+result[i].talkTitle;
+    option.value = i;
+    option.talkTitle = result[i].talkTitle;
+    option.speakerName = result[i].speakerName;
+    option.talkTime = result[i].talkTime;
+    option.talkDate = result[i].talkDate;
+    dropdown.add(option);
+  }
 })
 .catch(function(err) {
     console.log(err.message);
