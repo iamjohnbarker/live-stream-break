@@ -195,7 +195,7 @@ function determineScreenShotSize () {
   const screenSize = screen.getPrimaryDisplay().workAreaSize
   const maxDimension = Math.max(screenSize.width, screenSize.height)
   return {
-    width: 1280,
-    height: 720
+    width: 1920,
+    height: 1080
   }
 }
