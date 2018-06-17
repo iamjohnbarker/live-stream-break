@@ -50,8 +50,6 @@ h2{
  margin-left:10px;
  margin-right: 10px;
 }
-
-
 .floatleft {
   float: left;
   clear: left;
@@ -73,7 +71,7 @@ h2{
   font-weight: 900;
 }
 
-.talkSpeaker {
+.speakerName {
   font-size: 20px;
   font-weight: 600;
 }

@@ -17,7 +17,7 @@ let mainWindowTwo
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 460, height: 940 })
+  mainWindow = new BrowserWindow({ width: 860, height: 795 })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -40,7 +40,7 @@ function createWindow() {
 
 function createWindowTwo() {
   // Create the browser window.
-  mainWindowTwo = new BrowserWindow({ width: 900, height: 500 })
+  mainWindowTwo = new BrowserWindow({ width: 1280, height: 720 })
 
   // and load the index.html of the app.
   mainWindowTwo.loadURL(url.format({
@@ -89,21 +89,9 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 // In main process.
 
-ipcMain.on('button', function (e, item, item2, item3, item4, item5, item6, item7) {
-  console.log(item);
-  console.log(item2);
-  console.log(item3);
-  console.log(item4);
-  console.log(item5);
-  console.log(item6);
-  console.log(item7);
-  mainWindowTwo.webContents.send('buttonSend', item);
-  mainWindowTwo.webContents.send('buttonSend2', item2);
-  mainWindowTwo.webContents.send('buttonSend3', item3);
-  mainWindowTwo.webContents.send('buttonSend4', item4);
-  mainWindowTwo.webContents.send('buttonSend5', item5);
-  mainWindowTwo.webContents.send('buttonSend6', item6);
-  mainWindowTwo.webContents.send('buttonSend7', item7);
+ipcMain.on('button', function (e, items) {
+   console.log(items);
+   mainWindowTwo.webContents.send('buttonSend', items);
 })
 
 

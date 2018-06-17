@@ -20,51 +20,64 @@ var today = new Date();
 var todaysDate = today.toISOString().slice(0, 10);
 console.log(todaysDate);
 
-ipcRenderer.on('buttonSend', function (e, item, item2) {
+ipcRenderer.on('buttonSend', function (e, items) {
+  console.log(items);
+  
   var div = document.getElementById('talkTitle');
-  console.log(item);
-  div.innerText = item;
+  div.innerText = items[0];
 })
 
-ipcRenderer.on('buttonSend2', function (e, item2) {
-  var div = document.getElementById('talkSpeaker');
-  console.log(item2);
-  div.innerText = item2;
+ipcRenderer.on('buttonSend', function (e, items) {
+  var div = document.getElementById('speakerName');
+  div.innerText = items[1];
 })
 
 
-ipcRenderer.on('buttonSend3', function (e, item3) {
+ipcRenderer.on('buttonSend', function (e, items) {
   var div = document.getElementById('talkTime');
-  console.log(item3);
-  div.innerText = item3;
+  div.innerText = items[2];;
   document.getElementById('countdown').innerHTML = '';
 
-  var countDownDate = new Date(todaysDate + " " + item3);
+  var countDownDate = new Date(todaysDate + " " + items[2]);
   myFunction(countDownDate);
 
 })
 
-ipcRenderer.on('buttonSend4', function (e, item4) {
+ipcRenderer.on('buttonSend', function (e, items) {
   var div = document.getElementById('talkZone');
-  console.log(item4);
-  div.innerText = item4;
+  if (items[3] == '') {
+    div.innerText = '';
+  } else {
+    div.innerText = '(' + items[3] + ')';
+  }
 })
 
-
-ipcRenderer.on('buttonSend5', function (e, item5) {
-  document.getElementById("speakerImage").src = item5;
-  console.log(item5);
+ipcRenderer.on('buttonSend', function (e, items) {
+  if (items[4] == '') {
+   document.getElementById("speakerImage").src = "https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png";
+  } else {
+    document.getElementById("speakerImage").src = items[4];
+  }
 })
 
-ipcRenderer.on('buttonSend6', function (e, item6) {
-  document.getElementById("eventLogo").src = item6;
-  console.log(item6);
+ipcRenderer.on('buttonSend', function (e, items) {
+  if (items[5] == '') {
+    document.getElementById("eventLogo").src = "https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png";
+   } else {
+     document.getElementById("eventLogo").src = items[5];
+   }
 })
 
-ipcRenderer.on('buttonSend7', function (e, item7) {
-  var div = document.getElementById('eventName');
-  div.innerText = item7;
-  console.log(item7);
+ipcRenderer.on('buttonSend', function (e, items) {
+  var div = document.getElementById('headerText');
+  div.innerHTML = items[6];
+})
+
+ipcRenderer.on('buttonSend', function (e, items) {
+  var div = document.getElementById('countdown');
+  div.style.backgroundColor = items[7];
+  var tableHead = document.getElementById('tableHead');
+  tableHead.style.backgroundColor = items[7];
 })
 
 
@@ -78,7 +91,7 @@ function myFunction(countDownDate) {
     var now = new Date().getTime();
 
     var distance = countDownDate - now;
-    console.log(distance);
+    //console.log(distance);
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

@@ -10,59 +10,111 @@
     body {
       padding: 30px;
     }
+
+    .seperator {
+      border-top: 1px solid #e0e0e0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
   <h2>Live Stream Break</h2>
 
+  <div class="seperator"></div>
+
   <form>
-    <div class="form-group">
-      <label for="spreadsheetID">Sheet ID</label>
-      <div class="input-group mb-3">
-        <input id="spreadsheetID" class="form-control" type="text" name="" placeholder="e.g. abc123-321bca">
-        <div class="input-group-append">
-          <button id="spreadsheetIDRefresh" class="btn btn-outline-secondary" type="button">Refresh</button>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="spreadsheetID">Sheet ID</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="spreadsheetID" class="form-control" type="text" name="" placeholder="e.g. abc123-321bca">
+            <div class="input-group-append">
+              <button id="spreadsheetIDRefresh" class="btn btn-outline-secondary" type="button">Refresh</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="speakerName">Talk Picker</label>
+          <select id="talkPicker" class="form-control form-control-sm">
+            <option>First, enter the Sheet ID</option>
+          </select>
         </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="speakerName">Talk Picker</label>
-      <select id="talkPicker" class="form-control">
-        <option>First, enter the ID above</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="speakerName">Event Name</label>
-      <input id="eventName" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="speakerName">Event Logo URL</label>
-      <input id="eventLogo" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="speakerName">Talk Title</label>
-      <input id="speakerName" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="speakerTitle">Speaker Name</label>
-      <input id="speakerTitle" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="trackTime">Time</label>
-      <input id="trackTime" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="trackZone">Time Zone</label>
-      <input id="trackZone" class="form-control" type="text" name="" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for="speakerImage">Image URL</label>
-      <input id="speakerImage" class="form-control" type="text" name="" placeholder="">
+
+    <div class="seperator"></div>
+
+    <div class="row">
+      <div class="col">
+        <h3>Branding</h3>
+        <div class="form-group">
+          <label for="speakerName">Event Logo URL</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="eventLogo" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="brandColour">Brand Colour (e.g. #e0e0e0)</label>
+            <div class="input-group input-group-sm mb-3">
+              <input id="brandColour" class="form-control" type="text" name="" placeholder="">
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <h3>Content</h3>
+        <div class="form-group">
+          <label for="speakerName">Header text (HTML allowed)</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="headerText" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="speakerName">Talk Title</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="talkTitle" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="speakerTitle">Speaker Name</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="speakerName" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="trackTime">Time</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="trackTime" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="trackZone">Time Zone</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="trackZone" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="speakerImage">Speaker Image URL</label>
+          <div class="input-group input-group-sm mb-3">
+            <input id="speakerImage" class="form-control" type="text" name="" placeholder="">
+          </div>
+        </div>
+      </div>
     </div>
 
 
-    <button id="sendToMain" class="btn btn-primary" type="button" name="button">Update</button>
+
+
+
+
+
+
+    <button id="sendToMain" class="btn btn-primary" type="button" name="button">Update display</button>
   </form>
   </div>
 

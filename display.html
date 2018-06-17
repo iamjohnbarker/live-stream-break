@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='./styles.css'>
+    <link rel='stylesheet' href='./assets/styles/styles.css'>
     <meta charset='UTF-8'>
     <title>Display</title>
   </head>
   <body>
     <div class='header'>
-      <img id='eventLogo' src='' width='300px' alt=''>
-      <h1>Welcome to the</br><span id='eventName' class='eventName'>EVENT NAME</span></br>live stream</h1>
+      <img id='eventLogo' src='https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png' height='100px' alt=''>
+      <h1><span id='headerText' class='headerText'>Welcome to the </br>EVENT NAME</br>live stream</span></h1>
     </div>
     <div id='title' class=''>
     </div>
 
 
     <div class='schedule'>
-      <div class='tableHead'>
+      <div id='tableHead' class='tableHead'>
         <span class='comingUp'>Coming up </span>
         <div id='countdown'></div>
 
       </div>
       <div class='item'>
-        <div class='customimage floatleft'><img id='speakerImage' class='speakerImage' src=''>
+        <div class='customimage floatleft'><img id='speakerImage' class='speakerImage' src='https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png'>
         </div>
         <p>
           <div class='text'><span id='talkTitle' class='talkTitle'>TITLE</span>
           </br>
-          by <span id='talkSpeaker' class='talkSpeaker'>NAME</span> at <span id='talkTime' class='talkTime'>TIME</span> (<span id='talkZone' class='talkZone'>TIME</span>)
+          by <span id='speakerName' class='speakerName'>NAME</span> at <span id='talkTime' class='talkTime'>TIME</span> <span id='talkZone' class='talkZone'>(ZONE)</span>
           </br>
         </p>
         </div>

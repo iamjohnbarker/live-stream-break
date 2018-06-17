@@ -30,13 +30,14 @@ document.getElementById('spreadsheetIDRefresh').addEventListener('click', functi
         option = document.createElement('option');
         option.text = result[i].speakerName + ' - ' + result[i].talkTitle;
         option.value = i;
-        option.eventName = result[i].eventName;
+        option.headerText = result[i].headerText;
         option.eventLogo = result[i].eventLogo;
         option.talkTitle = result[i].talkTitle;
         option.speakerName = result[i].speakerName;
         option.talkTime = result[i].talkTime;
         option.timeZone = result[i].timeZone;
         option.speakerImage = result[i].speakerImage;
+        option.brandColour = result[i].brandColour;
         dropdown.add(option);
       }
     })
@@ -51,12 +52,13 @@ document.getElementById('spreadsheetIDRefresh').addEventListener('click', functi
 
   document.getElementById('talkPicker').addEventListener('change', function (e) {
     console.log(e);
-    document.getElementById('eventName').value = e.target.selectedOptions[0].eventName;
+    document.getElementById('headerText').value = e.target.selectedOptions[0].headerText;
     document.getElementById('eventLogo').value = e.target.selectedOptions[0].eventLogo;
-    document.getElementById('speakerName').value = e.target.selectedOptions[0].talkTitle;
-    document.getElementById('speakerTitle').value = e.target.selectedOptions[0].speakerName;
+    document.getElementById('speakerName').value = e.target.selectedOptions[0].speakerName;
+    document.getElementById('talkTitle').value = e.target.selectedOptions[0].talkTitle;
     document.getElementById('trackZone').value = e.target.selectedOptions[0].timeZone;
     document.getElementById('speakerImage').value = e.target.selectedOptions[0].speakerImage;
+    document.getElementById('brandColour').value = e.target.selectedOptions[0].brandColour;
 
     function minTommss(minutes) {
       var hrs = Math.floor(Math.abs(minutes) * 24);
@@ -74,12 +76,14 @@ document.getElementById('spreadsheetIDRefresh').addEventListener('click', functi
 document.getElementById('sendToMain').addEventListener('click', buttonClicked);
 function buttonClicked(e) {
   e.preventDefault();
-  var item = document.getElementById('speakerName').value;
-  var item2 = document.getElementById('speakerTitle').value;
-  var item3 = document.getElementById('trackTime').value;
-  var item4 = document.getElementById('trackZone').value;
-  var item5 = document.getElementById('speakerImage').value;
-  var item6 = document.getElementById('eventLogo').value;
-  var item7 = document.getElementById('eventName').value;
-  ipcRenderer.send('button', item, item2, item3, item4, item5, item6, item7);
+  var talkTitle = document.getElementById('talkTitle').value;
+  var speakerName = document.getElementById('speakerName').value;
+  var trackTime = document.getElementById('trackTime').value;
+  var trackZone = document.getElementById('trackZone').value;
+  var speakerImage = document.getElementById('speakerImage').value;
+  var eventLogo = document.getElementById('eventLogo').value;
+  var headerText = document.getElementById('headerText').value;
+  var brandColour = document.getElementById('brandColour').value;
+  var items = [talkTitle, speakerName, trackTime, trackZone, speakerImage, eventLogo, headerText, brandColour];
+  ipcRenderer.send('button', items);
 }
