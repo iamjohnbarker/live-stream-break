@@ -87,3 +87,25 @@ function buttonClicked(e) {
   var items = [talkTitle, speakerName, trackTime, trackZone, speakerImage, eventLogo, headerText, brandColour];
   ipcRenderer.send('button', items);
 }
+
+
+var spreadsheetIDValidate = document.getElementById("spreadsheetID");
+var capital = document.getElementById("capital");
+
+
+spreadsheetIDValidate.onkeyup = function() {
+  // Validate http or edit
+  var validateURL = /(http)|(edit)/g;
+  if(spreadsheetIDValidate.value.match(validateURL)) {  
+    // capital.classList.remove("invalid");
+    // capital.classList.add("valid");
+    spreadsheetIDValidate.style.borderColor = '#ec6f6f';
+    document.getElementById("validationMessage").style.display = "block";
+  } else {
+    // capital.classList.remove("valid");
+    // capital.classList.add("invalid");
+    spreadsheetIDValidate.style.borderColor = '';
+    document.getElementById("validationMessage").style.display = "none";
+  }
+
+}

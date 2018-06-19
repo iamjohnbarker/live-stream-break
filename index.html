@@ -10,12 +10,22 @@
     body {
       padding: 30px;
     }
-
     .seperator {
       border-top: 1px solid #e0e0e0;
       margin-top: 10px;
       margin-bottom: 10px;
     }
+    #validationMessage {
+    display:none;
+    font-size: 13px;
+    }  
+    .sheetIDTrue {
+      color:#67c361;
+    } 
+    .sheetIDFalse {
+      color:#ec6f6f;
+    }  
+
   </style>
 </head>
 
@@ -47,7 +57,9 @@
         </div>
       </div>
     </div>
-
+    <div id="validationMessage">
+      <p id="capital" class="invalid">We only need the ID of your sheet. For example:<br/><span class="sheetIDFalse">https://docs.google.com/spreadsheets/d/</span><span class="sheetIDTrue">1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU</span><span class="sheetIDFalse">/edit#gid=0</span></p>
+    </div>
     <div class="seperator"></div>
 
     <div class="row">
@@ -106,11 +118,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
 
 
 
