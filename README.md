@@ -7,7 +7,7 @@ You can see the app on the left and the display window on the right:
 
 ## How it works
 ### Connections
-All you have to do it lauch the application, attached your computer to a live video switcher (e.g. via HDMI/Mini Display) and set the display window to full screen on your output window.
+All you have to do it launch the application, attached your computer to a live video switcher (e.g. via HDMI/Mini Display) and set the display window to full screen on your output window.
 
 ### Google Sheets
 Grab the ID from whatever Google Sheet you want to pull info from (you can use [this sheet](https://docs.google.com/spreadsheets/d/1CPsvb5-kmFa4rSAH89j0B1Bb4DFLfK8_QlhVvwthyAU/edit?usp=sharing) as a template). 
@@ -29,10 +29,10 @@ Set up your schedule using a Google Sheet so that you don't have to do lots of c
 
 'Talk Time' will begin a countdown timer right on your Live Stream Break display window, this will allow viewers to be kept up to date on when the event beings/continues.
 
-There are also desktop notifcations built right in so that you know when there are 5 mins, 3 mins & 1 minute left on the timer.
+There are also desktop notifications built right in so that you know when there are 5 mins, 3 mins & 1 minute left on the timer.
 
 ### On-brand
-(Coming soon) You'll be able to change the branding of LSB.
+Use hex colours to change the branding on the display. More customisation coming in future versions!
 
 ## Download
 Grab the [latest version here](https://github.com/iamjohnbarker/live-stream-break/tree/master/releases).
