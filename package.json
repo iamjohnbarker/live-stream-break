@@ -1,7 +1,7 @@
 {
   "name": "live-stream-break",
   "productName": "Live Stream Break",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "A nice way to display information to your live stream viewers.",
   "main": "main.js",
   "scripts": {
